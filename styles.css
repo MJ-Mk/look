@@ -28,6 +28,10 @@ body {
   background-color: var(--card-title-bg-color);
   height: var(--card-title-h);
   display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'title title title title'
+    'data data data btn';
 }
 
 .card #title {
@@ -35,9 +39,15 @@ body {
   font-size: 1.7em;
   font-weight: 500;
   color: rgb(100, 100, 100);
+  grid-area: title;
 }
 .card #data {
   font-family: sans-serif;
+  grid-area: data;
+}
+
+.card #btn {
+  grid-area: btn;
 }
 
 .card #btn a {
