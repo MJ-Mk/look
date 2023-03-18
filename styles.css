@@ -1,61 +1,113 @@
 body {
   background-color: grey;
+  padding: 1vw;
+  display: grid;
 }
 
 :root {
   box-sizing: border-box;
-  --card-width: 960px;
-  --card-height: calc(var(--card-width) / 2);
+  font-family: sans-serif;
+
+  --card-h-width: 1260px;
+  --card-h-height: calc(var(--card-h-width) / 2);
+
+  --card-v-width: calc(var(--card-h-width) / 3);
+  --card-v-height: var(--card-h-height);
+
   --card-radius: 6px;
   --card-bg-color: rgb(223, 226, 27);
   --card-title-bg-color: white;
-  --card-title-h: calc(var(--card-width) / 7);
 }
 
 .card {
   border-radius: var(--card-radius);
   background-color: var(--card-bg-color);
-  width: var(--card-width);
-  min-height: var(--card-height);
   display: flex;
+  margin: 20px;
+  overflow: hidden;
   flex-direction: column;
   justify-content: flex-end;
-  overflow: hidden;
 }
 
-.card #stripe {
-  padding: 18px 25px;
+.card-h {
+  width: var(--card-h-width);
+  min-height: var(--card-h-height);
+}
+
+.card-v {
+  width: var(--card-v-width);
+  min-height: var(--card-v-height);
+}
+
+.pict {
+  background-image: url('https://images.unsplash.com/photo-1650410368017-d1304b35876b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80');
+  background-size: contain;
+}
+
+.stripe {
+  padding: 18px 30px 35px;
   background-color: var(--card-title-bg-color);
-  height: var(--card-title-h);
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-areas:
-    'title title title title'
-    'data data data btn';
+  display: flex;
 }
 
-.card #title {
-  font-family: sans-serif;
-  font-size: 1.7em;
-  font-weight: 500;
+.card-h .standard.stripe {
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card-h .center.stripe {
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-v .stripe {
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card-v .title {
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-bottom: 35px;
   color: rgb(100, 100, 100);
-  grid-area: title;
-}
-.card #data {
-  font-family: sans-serif;
-  grid-area: data;
+  flex-basis: 100%;
 }
 
-.card #btn {
-  grid-area: btn;
+.standard .title {
+  font-size: 1.7em;
+  font-weight: 400;
+  margin-bottom: 35px;
+  color: rgb(100, 100, 100);
+  flex-basis: 100%;
 }
 
-.card #btn a {
-  font-family: sans-serif;
+.center .title {
+  font-size: 1.7em;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: rgb(100, 100, 100);
+}
+
+.data {
+}
+
+.standard .btn {
+  flex-basis: 160px;
+}
+
+.center .btn {
+  margin-top: 20px;
+}
+
+.btn a {
   font-size: 1.1em;
+  line-height: 1.8em;
   font-weight: 500;
   text-decoration: none;
-  padding: 12px 25px;
+  padding: 0.5em 1em;
   background-color: brown;
   color: wheat;
   border-radius: var(--card-radius);
