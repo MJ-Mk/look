@@ -1,7 +1,7 @@
 body {
-  background-color: grey;
-  padding: 1vw;
-  display: grid;
+  background-color:aquamarine;
+  padding:0;
+  
 }
 
 :root {
@@ -12,11 +12,38 @@ body {
   --card-h-height: calc(var(--card-h-width) / 2);
 
   --card-v-width: calc(var(--card-h-width) / 3);
-  --card-v-height: var(--card-h-height);
+  --card-v-height: calc(var(--card-h-height)/1.25);
 
   --card-radius: 6px;
   --card-bg-color: rgb(223, 226, 27);
   --card-title-bg-color: white;
+}
+
+nav{
+width: 102%;
+margin-left: -1%;
+height: 200px;
+padding:1vw 2vw;
+background-color: azure;
+box-shadow: 0 5px 12px  rgb(32, 28, 28, 0.3); 
+display: flex;
+justify-content: space-around;
+}
+nav img{
+  height: 90%;
+}
+nav .login{
+  height: 130px;
+  border-radius: var(--card-radius);
+  background-color: cadetblue;
+
+}
+
+.contener{
+  padding-top: 50px;
+  display: grid;
+  justify-content: center;
+
 }
 
 .card {
@@ -27,6 +54,7 @@ body {
   overflow: hidden;
   flex-direction: column;
   justify-content: flex-end;
+  box-shadow: 0 5px 7px  rgb(32, 28, 28, 0.3); 
 }
 
 .card-h {
@@ -95,19 +123,21 @@ body {
 }
 
 .standard .btn {
-  flex-basis: 160px;
+  flex-basis: auto;
 }
 
 .center .btn {
   margin-top: 20px;
 }
 
-.btn a {
+a.btn {
   font-size: 1.1em;
+  text-align: center;
   line-height: 1.8em;
   font-weight: 500;
   text-decoration: none;
   padding: 0.5em 1em;
+  width: fit-content;
   background-color: brown;
   color: wheat;
   border-radius: var(--card-radius);
