@@ -1,49 +1,73 @@
 body {
-  background-color:aquamarine;
-  padding:0;
-  
+  background-color: aquamarine;
+  display: block;
 }
 
 :root {
   box-sizing: border-box;
   font-family: sans-serif;
-
+  /* -- card-h = card horizontal --*/
   --card-h-width: 1260px;
   --card-h-height: calc(var(--card-h-width) / 2);
 
+  /* -- card-v = card vertical --*/
   --card-v-width: calc(var(--card-h-width) / 3);
-  --card-v-height: calc(var(--card-h-height)/1.25);
+  --card-v-height: calc(var(--card-h-height) / 1.25);
 
   --card-radius: 6px;
   --card-bg-color: rgb(223, 226, 27);
   --card-title-bg-color: white;
+
+  --nav-height: calc(120px + (2vh + 2vw));
 }
 
-nav{
-width: 102%;
-margin-left: -1%;
-height: 200px;
-padding:1vw 2vw;
-background-color: azure;
-box-shadow: 0 5px 12px  rgb(32, 28, 28, 0.3); 
-display: flex;
-justify-content: space-around;
-}
-nav img{
-  height: 90%;
-}
-nav .login{
-  height: 130px;
-  border-radius: var(--card-radius);
-  background-color: cadetblue;
-
+nav {
+  width: 102%;
+  margin-left: -1%;
+  height: var(--nav-height);
+  padding: 1em 2vw;
+  background-color: azure;
+  box-shadow: 0 5px 12px rgb(32, 28, 28, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  overflow: auto;
 }
 
-.contener{
+nav img {
+  height: 94%;
+  max-height: 150px;
+  width: auto;
+}
+
+nav .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+nav .login p {
+  margin-top: 0;
+}
+
+nav .btn-nav-login {
+  height: 76px;
+  border-radius: 12px;
+  background: linear-gradient(35deg, azure, lightblue);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.container {
+  width: 94%;
+  margin: 0 auto;
   padding-top: 50px;
   display: grid;
   justify-content: center;
-
+  grid-auto-flow: row;
 }
 
 .card {
@@ -54,7 +78,7 @@ nav .login{
   overflow: hidden;
   flex-direction: column;
   justify-content: flex-end;
-  box-shadow: 0 5px 7px  rgb(32, 28, 28, 0.3); 
+  box-shadow: 0 5px 7px rgb(32, 28, 28, 0.3);
 }
 
 .card-h {
@@ -131,14 +155,15 @@ nav .login{
 }
 
 a.btn {
-  font-size: 1.1em;
+  font-size: 1em;
   text-align: center;
-  line-height: 1.8em;
+  line-height: 1.5em;
   font-weight: 500;
   text-decoration: none;
-  padding: 0.5em 1em;
+  padding: 0.4em 1em;
   width: fit-content;
-  background-color: brown;
-  color: wheat;
+  background-color: darkmagenta;
+  color: whitesmoke;
   border-radius: var(--card-radius);
+  margin: 1em;
 }
