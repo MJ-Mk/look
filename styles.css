@@ -64,7 +64,7 @@ nav .btn-nav-login {
 /* --------------------------------------------------- */
 
 .grd-wrap {
-  width: 84vw;
+  width: 82vw;
   margin: 3vw auto;
   overflow-x: hidden;
   display: flex;
@@ -84,29 +84,6 @@ nav .btn-nav-login {
   flex: 1 1 48%;
 }
 
-/*
-
-.grd-wrap > div:nth-child(3) {
-  flex: 1 0 48%;
-  //grid-column: 1/2;
-  //grid-area: c;
-}
-
-.grd-wrap > div:nth-child(4) {
-  flex: 1 0 48%;
-  //grid-column: 1/2;
-  //grid-area: d;
-}
-
-.grd-wrap > div:nth-child(5) {
-  flex: 1 0 48%;
-  //grid-column: 1/2;
-  //grid-area: d;
-}
-
-.grd-wrap > div:nth-child(n + 6) {
-  flex: 1 0 48%;
-}*/
 
 .card {
   border-radius: var(--card-radius);
@@ -130,7 +107,7 @@ nav .btn-nav-login {
 
 .pict {
   background-image: url('https://images.unsplash.com/photo-1650410368017-d1304b35876b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80');
-  background-size: contain;
+  background-size: cover;
 }
 
 .stripe {
