@@ -86,13 +86,13 @@ nav .btn-nav-login {
 
 /*---------------- EVENT CARD -------------------- */
 
-.card {
+.box {
   border-radius: 0.5em;
   background-color: var(--card-bg-color);
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   box-shadow: 0 5px 7px rgb(32, 28, 28, 0.3);
 }
 
@@ -106,19 +106,30 @@ nav .btn-nav-login {
   min-height: var(--card-v-height);
 }
 
-.pict {
-  background-image: url('https://images.unsplash.com/photo-1650410368017-d1304b35876b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80');
-  background-size: cover;
+.box picture {
+  flex: 1 1 30%;
+  object-position: 0;
+  object-fit: fill;
+  max-height: 500px;
+  opacity: 0.5;
+  background-color: chartreuse;
+}
+
+.box picture img {
+  flex: 1 1 60%;
+  object-fit: fill;
+  background-color: blueviolet;
 }
 
 .stripe {
+  flex: 1 1 50%;
   padding: 18px 30px 35px;
-  background-color: var(--card-title-bg-color);
+  //background-color: var(--card-title-bg-color);
   display: flex;
+  background-color: chocolate;
 }
 
 .card-h .standard.stripe {
-  grid-area: a;
   flex-flow: wrap;
   justify-content: space-between;
   align-items: baseline;
