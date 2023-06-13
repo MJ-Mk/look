@@ -108,8 +108,8 @@ nav .btn-nav-login {
 
 .box picture {
   flex: 1 1 30%;
-  object-position: 0;
-  object-fit: fill;
+  //object-position: 0;
+  //object-fit: fill;
   max-height: 500px;
   opacity: 0.5;
   background-color: chartreuse;
@@ -117,7 +117,7 @@ nav .btn-nav-login {
 
 .box picture img {
   flex: 1 1 60%;
-  object-fit: fill;
+  //object-fit: fill;
   background-color: blueviolet;
 }
 
