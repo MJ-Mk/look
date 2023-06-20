@@ -3,7 +3,8 @@
   <head>
     <title>Home</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -22,33 +23,26 @@
       </div>
     </nav>
 
-    <div class="grd-wrap">
+    <div class="box-wrap">
 
-      <div class="box card-h">
-        <picture>
-          <source
-            srcset="img/tst-pict_h.jpg, img/tst-pict_v.jpg"/>
+      <div class="box">
+
+     <picture>
+          <source media="(min-width:900px)" 
+          srcset="
+          https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_1300.jpeg 1300w, 
+          https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_1600.jpeg 1600w, 
+          https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_2200.jpeg 2200w" 
+         >
+          <source media="(orientation:portrait)" srcset="https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_v.jpeg" >
+
           <img
-            src="img/tst-pict_h.jpg"
-            alt="logo"
-          />
+            src="https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_fallback.jpeg" alt="logo">
         </picture>
-        <div class="standard stripe">
-          <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
-          <div class="data">22.98.2304 Sobota</div>
-          <a class="btn" href="/">Buy now</a>
-        </div>
-      </div>
 
-      <div class="card card-h pict">
-        <div class="center stripe">
-          <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
-          <div class="data">22.98.2304 Sobota</div>
-          <a class="btn" href="/">Buy now</a>
-        </div>
-      </div>
 
-      <div class="card card-v pict">
+
+
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
           <div class="data">22.98.2304 Sobota</div>
@@ -56,7 +50,31 @@
         </div>
       </div>
 
-      <div class="card card-v pict">
+
+
+
+      <div class="box">
+        <img srcset="
+        https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_1300.jpeg 1300w, 
+        https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_1600.jpeg 1600w, 
+        https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_2200.jpeg 2200w"
+         />
+        <div class="stripe">
+          <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
+          <div class="data">22.98.2304 Sobota</div>
+          <a class="btn" href="/">Buy now</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="stripe">
+          <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
+          <div class="data">22.98.2304 Sobota</div>
+          <a class="btn" href="/">Buy now</a>
+        </div>
+      </div>
+
+      <div class="box">
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
           <div class="data">22.98.2304 Sobota</div>
@@ -64,7 +82,7 @@
         </div>
       </div>
 
-      <div class="card card-v pict">
+      <div class="box">
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
           <div class="data">22.98.2304 Sobota</div>
@@ -72,7 +90,7 @@
         </div>
       </div>
 
-      <div class="card card-v pict">
+      <div class="box">
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
           <div class="data">22.98.2304 Sobota</div>
@@ -80,7 +98,7 @@
         </div>
       </div>
 
-      <div class="card card-v pict">
+      <div class="box">
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
           <div class="data">22.98.2304 Sobota</div>
@@ -88,7 +106,7 @@
         </div>
       </div>
 
-      <div class="card card-v pict">
+      <div class="box">
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
           <div class="data">22.98.2304 Sobota</div>
@@ -96,7 +114,7 @@
         </div>
       </div>
 
-      <div class="card card-v pict">
+      <div class="box">
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
           <div class="data">22.98.2304 Sobota</div>
@@ -104,6 +122,6 @@
         </div>
       </div>
     </div>
-    <!---->
+   
   </body>
 </html>

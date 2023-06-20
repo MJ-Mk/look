@@ -1,29 +1,28 @@
 body {
   background-color: aquamarine;
+  margin:0;
 }
 
 :root {
   box-sizing: border-box;
   font-family: sans-serif;
-
   --card-radius: 6px;
-  --card-bg-color: rgb(223, 226, 27);
-  --card-title-bg-color: white;
+  --card-bg-color: #c951f5;
+  --card-title-bg-color: rgb(115, 230, 138);
 
   /* -- card-h = card horizontal --*/
   --card-h-width: 1260px;
   --card-h-height: calc(var(--card-h-width) / 2);
 
-  /* -- card-v = card vertical --*/
+  /* -- card-v = card vertical ------------------- */
   --card-v-width: calc(var(--card-h-width) / 3);
   --card-v-height: calc(var(--card-h-height) / 1.25);
-
   --nav-height: calc(120px + (2vh + 2vw));
 }
 
 nav {
-  width: 102%;
-  margin-left: -1%;
+  width: 100%;
+  margin: 0;
   height: var(--nav-height);
   padding: 1em 2vw;
   background-color: azure;
@@ -63,76 +62,104 @@ nav .btn-nav-login {
 
 /* --------------------------------------------------- */
 
-.grd-wrap {
+.box-wrap {
   width: 82vw;
   margin: 3vw auto;
-  overflow-x: hidden;
+  overflow: hidden;
   display: flex;
   justify-content: stretch;
   flex-wrap: wrap;
   align-items: stretch;
   align-content: stretch;
-  padding: 0 10px;
+  padding: 0 5px;
   gap: 35px;
 }
 
-.grd-wrap > div:nth-child(1) {
+@media screen and (max-width:1080px){
+  .box-wrap{
+    width:97%;
+  }
+}
+
+/* -------- BOXES TAMPLATE ------------------- */
+
+.box-wrap > div:nth-child(1) {
   flex: 1 1 100%;
+  aspect-ratio: 16 / 10;
 }
 
-.grd-wrap > div:nth-child(n + 2) {
+.box-wrap > div:nth-child(n + 2) {
   flex: 1 1 48%;
+  aspect-ratio: 10 / 12;
 }
 
-/*---------------- EVENT CARD -------------------- */
+
+@media screen and (max-width:1080px){
+  .box-wrap > div:nth-child(n) {
+    flex: 1 1 100%;
+    aspect-ratio: 16 / 10;
+    border: 2px solid red;
+}
+}
+
+@media screen and (max-width:860px){
+  .box-wrap > div:nth-child(n) {
+    flex: 1 1 100%;
+    aspect-ratio: 10 / 12;
+    border: 2px solid rgb(103, 205, 34);
+}
+}
+
+/*-------- EVENT CARD ---------------- */
 
 .box {
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   background-color: var(--card-bg-color);
   display: flex;
+  gap:0;
   overflow: hidden;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   box-shadow: 0 5px 7px rgb(32, 28, 28, 0.3);
 }
 
-.card-h {
-  min-width: 600px;
-  min-height: var(--card-h-height);
-}
-
-.card-v {
-  min-width: 350px;
-  min-height: var(--card-v-height);
+@media (orientation:portrait) {
+  
 }
 
 .box picture {
-  flex: 1 1 30%;
-  //object-position: 0;
-  //object-fit: fill;
-  max-height: 500px;
-  opacity: 0.5;
-  background-color: chartreuse;
+  flex: 1 0 auto;
+  background-color: rgb(52, 58, 231); 
 }
 
-.box picture img {
-  flex: 1 1 60%;
-  //object-fit: fill;
-  background-color: blueviolet;
+.box img{
+  flex: 1 0 auto;
+  object-fit:cover;
+  object-position:center;
+  background-color: pink;
+  display: block;
 }
 
-.stripe {
-  flex: 1 1 50%;
+.box .stripe {
+  flex: 0 1 auto;
   padding: 18px 30px 35px;
-  //background-color: var(--card-title-bg-color);
+  background-color: var(--card-title-bg-color);
   display: flex;
-  background-color: chocolate;
-}
-
-.card-h .standard.stripe {
   flex-flow: wrap;
   justify-content: space-between;
   align-items: baseline;
+  z-index: 5;
+}
+.box .stripe .title {
+  font-size: clamp(1rem, 0.3rem + 2.2vw, 4rem);
+  font-weight: 400;
+  margin-bottom: 35px;
+  color: rgb(100, 100, 100);
+  flex-basis: 100%;
+}
+.box .stripe .data {
+  font-size: clamp(1rem, 0.5rem + 1.5vw, 3rem);
+  font-weight: 300;
 }
 
 .card-h .center.stripe {
@@ -141,37 +168,9 @@ nav .btn-nav-login {
   align-items: center;
 }
 
-.card-v .stripe {
-  flex-flow: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-}
 
-.card-v .title {
-  font-size: 1.4em;
-  font-weight: 400;
-  margin-bottom: 35px;
-  color: rgb(100, 100, 100);
-  flex-basis: 100%;
-}
 
-.standard .title {
-  font-size: 1.7em;
-  font-weight: 400;
-  margin-bottom: 35px;
-  color: rgb(100, 100, 100);
-  flex-basis: 100%;
-}
 
-.center .title {
-  font-size: 1.7em;
-  font-weight: 400;
-  margin-bottom: 25px;
-  color: rgb(100, 100, 100);
-}
-
-.data {
-}
 
 .standard .btn {
   flex-basis: auto;
@@ -182,15 +181,17 @@ nav .btn-nav-login {
 }
 
 a.btn {
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: center;
-  line-height: 1.5em;
   font-weight: 500;
   text-decoration: none;
   padding: 0.4em 1em;
-  width: fit-content;
+  width: max-content;
   background-color: darkmagenta;
   color: whitesmoke;
   border-radius: var(--card-radius);
-  margin: 1em;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  
 }
