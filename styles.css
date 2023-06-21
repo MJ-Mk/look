@@ -6,7 +6,7 @@ body {
 :root {
   box-sizing: border-box;
   font-family: sans-serif;
-  --card-radius: 6px;
+  --box-radius: 0.5rem;
   --card-bg-color: #c951f5;
   --card-title-bg-color: rgb(115, 230, 138);
 
@@ -50,7 +50,7 @@ nav .login p {
   margin-top: 0;
 }
 
-nav .btn-nav-login {
+nav .btn-ro {
   height: 76px;
   border-radius: 12px;
   background: linear-gradient(35deg, azure, lightblue);
@@ -180,7 +180,7 @@ nav .btn-nav-login {
   margin-top: 20px;
 }
 
-a.btn {
+a.btn-ro {
   font-size: 1.5em;
   text-align: center;
   font-weight: 500;
@@ -189,7 +189,7 @@ a.btn {
   width: max-content;
   background-color: darkmagenta;
   color: whitesmoke;
-  border-radius: var(--card-radius);
+  border-radius: var(--box-radius);
   height: 33px;
   display: flex;
   align-items: center;
