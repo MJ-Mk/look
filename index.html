@@ -9,44 +9,58 @@
   </head>
 
   <body>
-    <nav>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Legia_Warsaw_logo.svg/1200px-Legia_Warsaw_logo.svg.png"
-      />
+    <header>
+      <a class="logo-top" href="/">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/d/db/Maccabi_Haifa_FC_Logo_2020.png"
+          alt="logo"
+        />
+        <div class="c_name">
+          <h1>Maccabi Haifa FC</h1>
+          <p>Official ticket store</p>
+        </div></a
+      >
 
-      <div class="login">
-        <p>EN</p>
-        <div class="btn-nav-login">
-          <a class="btn-ro" href="/"> Login</a>
-          <a class="btn-ro" href="/"> Login</a>
-        </div>
+      <div class="lang">
+        <a href="#"><i class="gg-info"></i>Information</a>
+        <select>
+          <option value="English">EN</option>
+          <option value="Dansk">HE</option>
+          <option value="Deutsch">DE</option>
+          <option value="Français">FR</option>
+          <option value="Polski">PL</option>
+        </select>
       </div>
-    </nav>
+
+      <div id="NewheaderCardPanel">
+        <a class="btn-ro" href="nav-fan.html">Login</a>
+        <a class="btn-ro" href="/">Create account</a>
+      </div>
+
+    </header>
 
     <div class="box-wrap">
 
       <div class="box">
-
      <picture>
-          <source media="(min-width:900px)" 
+          <source media="(min-width:1080px)" 
           srcset="
           https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_1300.jpeg 1300w, 
           https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_1600.jpeg 1600w, 
           https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_2200.jpeg 2200w" 
          >
-          <source media="(orientation:portrait)" srcset="https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_v.jpeg" >
+          <source media="(orientation:portrait)" 
+          srcset="https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_v.jpeg">
+
+
 
           <img
             src="https://roboticket-com-dev.s3.eu-central-1.amazonaws.com/imgs/tst_pict_h_fallback.jpeg" alt="logo">
         </picture>
-
-
-
-
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
-          <div class="data">22.98.2304 Sobota</div>
-          <a class="btn" href="/">Buy now</a>
+          <div class="date">22.98.2304 Sobota</div>
+          <a class="btn-ro" href="/">Buy now</a>
         </div>
       </div>
 
@@ -61,8 +75,8 @@
          />
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
-          <div class="data">22.98.2304 Sobota</div>
-          <a class="btn" href="/">Buy now</a>
+          <div class="date">22.98.2304 Sobota</div>
+          <a class="btn-ro" href="/">Buy now</a>
         </div>
       </div>
 
@@ -70,7 +84,7 @@
         <div class="stripe">
           <div class="title">RKS Szmacianka : Waleczni Grudziądz</div>
           <div class="data">22.98.2304 Sobota</div>
-          <a class="btn" href="/">Buy now</a>
+          <a class="btn-ro" href="/">Buy now</a>
         </div>
       </div>
 
