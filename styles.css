@@ -2,7 +2,6 @@ body {
   background-color: rgb(65, 69, 68);
   background: linear-gradient(105deg, rgb(197, 197, 197) 10%, rgb(39, 40, 40));
   margin:0;
-  scrollbar-width: none;
 }
 
 a:any-link{
