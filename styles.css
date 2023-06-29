@@ -16,8 +16,8 @@ a:any-link{
   --secundo-color:#0E723C;
   --box-radius: 0.4rem;
   --box-stripe-bg-color: rgb(255, 255, 255);
-  --normal-text-size: clamp(0.8rem, 0.3rem + 1.4vw, 1rem);
-  --mid-text-size: clamp(1rem, 0.6rem + 1.4vw, 1.2rem);
+  --normal-text-size: clamp(0.8rem, 0.3rem + 1.4vw, 1.2rem);
+  --mid-text-size: clamp(1rem, 0.8rem + 1.4vw, 1.3rem);
   --big-text-size: clamp(1.3rem, 1rem + 1.4vw, 1.6rem);
   --media-mobile-break: 980px;
 }
@@ -27,7 +27,7 @@ a.btn-ro {
   text-decoration: none;
   width: min-content;
   border-radius: 0.25rem;
-  padding: 1px 1rem;
+  padding: 2px 1rem;
   display: flex;
   place-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@ a.btn-ro {
   cursor: pointer;
   word-break: keep-all;
   white-space: nowrap;
-  height: 2rem;
+  height: 2.15rem;
   max-height: 54px;
 }
 
@@ -366,6 +366,15 @@ padding: 0.5rem 1rem;
   box-shadow: 0px 0px 10px 1px rgb(32, 28, 28, 0.3);
   overflow: hidden;
   background-color: #333;
+  container-type: inline-size;
+  container-name: boks;
+  contain: inline-size;
+}
+
+@container boks (max-width:500px) {
+  .box .stripe{
+   border:3px solid red;
+  }
 }
 
 .box picture {
